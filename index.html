@@ -47,10 +47,18 @@
 </head>
 <body>
   <div id="app">
-    <h1>Image GUI</h1>
     <div class="image-container">
-      <img :src="currentImage" alt="Current Image" @click="nextImage">
       <div>
+
+        <h1>Image GUI</h1>
+        <img :src="currentImage" alt="Current Image" @click="nextImage"
+      width="500" height="400"
+      
+   >
+    </img>
+     
+      <div> 
+        
         <h3>Preview Next</h3>
         <img v-for="(image, index) in previewNextImages" :key="'next_'+index" :src="image" class="preview-image" @click="changeImage(index)">
       </div>
